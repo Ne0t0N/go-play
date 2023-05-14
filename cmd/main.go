@@ -9,12 +9,12 @@ import (
 
 func main() {
 	port := flag.Int("p", 80, "port on which http server should listen")
-	addr := fmt.Sprintf(":%d", *port)
+	flag.Parse()
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello World!\n")
 	})
 
 	log.Printf("app is running on port %d\n", *port)
-	log.Fatal(http.ListenAndServe(addr, nil))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", *port), nil))
 }
