@@ -1,0 +1,31 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries, built with `go test -c`
+*.test
+
+# Output of the go coverage tools
+*.out
+
+# Go workspace files
+go.work
+
+# Log files
+*.log
+
+# Build files
+out/main/*
+
+# Target files
+**/.DS_Store
+
+#JetBrains files
+*.idea
+*.iml
+
+# VS Code files
+*.vscode
